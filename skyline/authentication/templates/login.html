@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Skyline | Login
+{% endblock %}
+
+{% block content %}
+<div class="form-div">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button class="btn btn-secondary">Login</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Skyline | Home
+{% endblock %}
+{% block content %}
+<h1>
+  Products
+</h1>
+<!-- The django template code  to show all products in the page starts here -->
+
+<div class="card-group">
+  {% for product in prods %}
+  <div class="card">
+    {% if product.pic %}
+    <img src="{{product.pic.url}}" class="card-img-top" alt="An image of {{product.name}}">
+    {% else %}
+    <img src="{% static 'images\placeholders\No_Image_Available.jpg' %}" class="card-img-top"
+      alt="An image of {{product.name}}">
+    {% endif %}
+    <div class="card-body">
+      <a href="{% url 'prod_details' product.id %}">
+        <h5 class="card-title text-center">{{product.name}}</h5>
+      </a>
+      <p class="card-text">{{product.desc}}</p>
+      <p class="card-text">&#8377; {{product.price}}</p>
+      <p class="card-text"><small class="text-body-secondary"></small></p>
+      <a href="{% url 'add_to_cart' product.id %}" class="btn btn-primary">Add to Cart</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<!-- Django template code ends here -->
+{% endblock %}
