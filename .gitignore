@@ -17,3 +17,21 @@ media/
 # Environment variables
 .env
 
+# Virtual environment
+virt/
+
+# Bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+# Django-specific
+*.log
+db.sqlite3
+media/
+
+# VS Code
+.vscode/
+
+# Environment variables
+.env
