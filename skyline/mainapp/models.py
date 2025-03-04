@@ -17,7 +17,6 @@ class Product(models.Model):
     # in the specified Media server subfolder, in this case, `products`. Rest of config is in settings.py
     pic = models.ImageField(upload_to = "products/", null = True)
 
-
     def __str__(self):
         return f"product : {self.name}"
 

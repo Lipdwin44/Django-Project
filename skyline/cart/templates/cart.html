@@ -67,7 +67,7 @@
         <tr>
             <th colspan="4" class="text-center text-light bg-info">Total</th>
             <td class="bg-light"><strong>Rs.<span id="overall-total">{{ total_price }}</span></strong></td>
-            <td><a href="" class="btn btn-outline-success">Place Your Order</a></td>
+            <td><a href="{% url 'create_order' %}" class="btn btn-outline-success">Place Your Order</a></td>
         </tr>
     </tbody>    
 </table>
