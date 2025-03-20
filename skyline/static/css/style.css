@@ -51,15 +51,15 @@ body {
                     img {
                         object-fit: cover;
                         aspect-ratio: 1/1;
-                        height: 50%;
+                        height: 70%;
                     }
                 .card-body {
-                    height: 50%;
+                    height: 70%;
                     button {
                         width: 60%;
                         font-size: smaller;
                     }
-                }
+                }  
             }
         }
 
